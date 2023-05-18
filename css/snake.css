@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+:root{
+    --voilet:#6c5ce7;
+    --pink:#FC4278;
+    --gradient:linear-gradient(90deg, var(--violet),var(--pink));
+    
+    }
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Nunito',sans-serif;
+    outline: none;
+    text-transform: capitalize;
+    transition:all .2s ease-out ;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #333;
+}
+
+html::-webkit-slider-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+.body{
+    background:url("../img/snakebg3.jfif");
+    background-position: center;
+    min-height: 100vh;
+    
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    display: flex;
+    justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+#board{
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+    width: 60%;
+    min-height: 80vh ;
+    background-color: rgba(130, 141, 152, 0.7);
+    border-radius: 5px;
+    border: 5px solid rgb(67, 63, 63);
+   box-shadow: 10px 10px 8px rgba(0,0,0,0.5);
+
+}
+
+.head{
+    background-color: red;
+    border-radius: 1rem;
+}
+
+.snake{
+    background:  linear-gradient(to bottom right,rgb(77, 98, 70),rgb(7, 18, 226));
+    border: 0.25px solid black;
+    border-radius: 2rem;
+}
+
+.food{
+    background:  linear-gradient(to bottom right,rgb(77, 98, 70),rgb(7, 18, 226));
+    border: 0.25px solid black;
+    
+    border-radius: 1.5rem;
+
+}
+
+#scoreBox{
+    font-size: 3rem;
+    font-weight: bolder;
+    width: 50%;
+}
+
+
+#Highscorebox{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+.scorerow{
+    display: flex;
+    flex-direction:row;
+    border: 2px solid black;
+    width: 60%;
+    margin :0 auto;
+    border: 5px solid rgb(67, 63, 63);
+    box-shadow: 10px 10px 8px rgba(0,0,0,0.5);
+}
+
+@media  (max-width: 900px){
+    html{
+        font-size: 55%;
+    }
+
+    body{
+        padding: 1.5rem;
+    }
+    header{
+        padding: 2rem;
+
+    }
+    .footer{
+        padding: 2rem;
+    }
+
+#board{
+
+width: 100%;
+
+}
+.scorerow{
+    width: 100%;
+}
+
+
+}
+
+@media  (max-width: 500px){
+
+#scoreBox{
+    font-size: 2rem;
+   
+}
+#Highscorebox{
+    font-size: 2rem;
+    
+}
+}
